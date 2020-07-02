@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import AddPost from "./components/AddPost";
+import Posts from "./components/Posts";
+import Header from "./layouts/header";
 
 function App() {
+  var mainconteiner = {
+    backgroundColor: "lightgrey",
+    textAlign: "center",
+    padding: "10px",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container" style={mainconteiner}>
+      <Header />
+      <AddPost />
+      <Posts />
     </div>
   );
 }
